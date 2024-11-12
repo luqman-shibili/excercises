@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <title>USN Input Form</title>
+    <script type="text/javascript">
+        function validateUSN() {
+            var usn = document.getElementById("usn").value;
+            var usnPattern = /^[1-4][A-Z]{2}\d{2}[A-Z]{2}\d{3}$/;
+
+            if (!usnPattern.test(usn)) {
+                alert("Invalid USN format. The format should be: a digit from 1 to 4, followed by two uppercase letters, two digits, two uppercase letters, and three digits.");
+                return false;
+            }
+            alert("Valid USN");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>USN Input Form</h1>
+    <form onsubmit="return validateUSN()">
+        <label for="usn">Enter your USN:</label>
+        <input type="text" id="usn" name="usn" required />
+        <br /><br />
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USN and Semester Input Form</title>
+    <script type="text/javascript">
+        function validateForm() {
+            var usn = document.getElementById("usn").value;
+            var semester = document.getElementById("semester").value;
+            var usnPattern = /^[1-4][A-Z]{2}\d{2}[A-Z]{2}\d{3}$/;
+            
+            if (!usnPattern.test(usn)) {
+                alert("Invalid USN format. The format should be: a digit from 1 to 4, followed by two uppercase letters, two digits, two uppercase letters, and three digits.");
+                return false;
+            }
+
+            var semesterNum = parseInt(semester, 10);
+            if (isNaN(semesterNum) || semesterNum < 1 || semesterNum > 8) {
+                alert("Invalid semester. Please enter a number between 1 and 8.");
+                return false;
+            }
+
+            alert("Valid USN and Semester");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>USN and Semester Input Form</h1>
+    <form onsubmit="return validateForm()">
+        <label for="usn">Enter your USN:</label>
+        <input type="text" id="usn" name="usn" required />
+        <br /><br />
+        
+        <label for="semester">Enter current semester:</label>
+        <input type="number" id="semester" name="semester" required min="1" max="8" />
+        <br /><br />
+        
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
