@@ -8,18 +8,17 @@ graph = {
     'F': []
 }
 
-def dls(node, depth, visited):
+def dls(node, depth):
     if depth == 0:
         print(node, end=' ')
         return
-    for neighbor in graph[node]:
-        if neighbor not in visited:
-            visited.add(neighbor)
-            dls(neighbor, depth-1, visited)
+    if depth > 0:
+        for neighbor in graph[node]:
+            dls(neighbor, depth - 1)
 
 def ids(start, max_depth):
-    for depth in range(max_depth):
-        visited = set()
-        dls(start, depth, visited)
+    for depth in range(max_depth + 1):
+        print(f"\nDepth {depth}: ", end='')
+        dls(start, depth)
 
 ids('A', 3)
