@@ -1,3 +1,4 @@
+#implementation of naive algorithm
 def naive_string_match(text, pattern):
     n = len(text)
     m = len(pattern)

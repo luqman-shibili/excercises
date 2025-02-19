@@ -1,3 +1,4 @@
+#implementation of stack 
 stack = []
 
 stack.append(1)

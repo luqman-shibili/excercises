@@ -1,3 +1,4 @@
+#implementation of Kruskal's algorithm
 class UnionFind:
     def __init__(self):
         self.parent = {}

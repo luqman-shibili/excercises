@@ -1,3 +1,4 @@
+#implementation of prims algorithm
 import heapq
 
 graph = {

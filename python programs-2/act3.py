@@ -1,3 +1,4 @@
+#implementation of DFS
 graph = {
     'A': ['B', 'C'],
     'B': ['D', 'E'],
