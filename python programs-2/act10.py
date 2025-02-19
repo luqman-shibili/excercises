@@ -5,7 +5,7 @@ class Node:
         self.left = None
         self.right = None
 
-# Example tree
+
 root = Node(1)
 root.left = Node(2)
 root.right = Node(3)

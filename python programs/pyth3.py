@@ -1,3 +1,4 @@
+#fibonacci series
 n=int(input("enter a number:"))
 num1 = 0
 num2 = 1
